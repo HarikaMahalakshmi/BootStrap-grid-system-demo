@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Grid System</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* Custom styles for better visualization */
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url(https://img.freepik.com/free-vector/gradient-geometric-blue-technology-background_52683-78527.jpg);
+      background-size: cover;
+      color: white;
+      overflow:scroll;
+    }
+    .navbar-custom {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      background-color:rgb(25, 47, 241);
+    }
+    .dropdown-menu {
+      z-index: 1000;
+      background-color:rgb(25, 47, 241);
+    }
+    .introduction-box {
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px auto; /* Adjusted margin */
+      max-width: 500px;
+    }
+    .content-box {
+      color: white;
+      text-align: center;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .footer {
+      position: sticky;
+      width: 100%;
+      bottom: 0;
+      background-color: rgb(103, 96, 96);
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      z-index: 1000;
+    }
+    .carousel-inner img {
+      width: 100%;
+      height: auto;
+    }
+    a{
+      color: rgb(242, 239, 61); 
+      /* Change to your desired color */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation bar -->
+<nav class="navbar navbar-custom navbar-expand-sm navbar-dark">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="sr-only">Toggle navigation</span>
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#intro">Introduction</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Overview <i class="fas fa-caret-down"></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <ul class="nav navbar-nav">
+              <li class="nav-item"><a class="dropdown-item nav-link" href="#elements" >Elements</a></li><br>
+              <li class="nav-item"><a class="dropdown-item nav-link" href="#gutters" >Gutters</a></li><br>
+              <li class="nav-item"><a class="dropdown-item nav-link" href="#usage">Usage</a></li></ul>
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#pros-cons">Pros & Cons</a></li>
+        <li class="nav-item"><a class="nav-link" href="#examples">Examples</a></li>
+        <li class="nav-item"><a class="nav-link" href="#conclusion">Conclusion</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Introduction Box -->
+<div class="container" style="padding-top: 70px;"> <!-- Added padding-top -->
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <div class="introduction-box" id="intro">
+        <h2>Introduction</h2>
+        <p>Understanding the Bootstrap Grid System is essential for creating responsive layouts. This presentation will guide you through the principles and best practices for mastering responsive design with Bootstrap.</p>
+        <p>The grid system in Bootstrap is a powerful layout system that allows you to create responsive and flexible designs for your web pages. It's based on a 12-column grid layout, which provides a way to organize content horizontally across the viewport, adjusting automatically to different screen sizes and devices.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <h2 style="text-align:center;">Let's discuss with an Example</h2>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+  
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="C:\Users\harik\Desktop\WT\BootPPT\Firefly 12 people entering into a wide door at a time. 3099 (1).jpg" alt="Slide 1" width="100" height="50">
+        </div>
+  
+        <div class="item">
+          <img src="C:\Users\harik\Desktop\WT\BootPPT\Firefly 12 people entering into a wide door at a time. 3099.jpg" alt="Slide 2" width="100" height="50">
+        </div>
+  
+        <div class="item">
+          <img src="C:\Users\harik\Desktop\WT\BootPPT\Firefly 20 people entering into a wide door at a time. 41491.jpg" alt="Slide 3" width="100" height="50">
+        </div>
+      </div>
+  
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!-- Content Rows -->
+  <div class="row g-3" id="elements">
+    <div class="col-sm-6">
+      <div class="row g-3">
+        <div class="col-sm-12 content-box" style="background-color: rgb(236, 184, 42);">
+          <h1>Elements</h1>
+          <p><h3>Container:</h3> The grid system in Bootstrap requires a container to hold and center the content. There are two types of containers: .container and .container-fluid. The .container class creates a fixed-width container, while the .container-fluid class creates a full-width container that spans the entire viewport.</p>
+          <p><h3>Rows:</h3> Inside the container, you use rows to create horizontal groups of columns. Rows are declared using the .row class.</p>
+          <p><h3>Columns:</h3>Columns are the building blocks of the grid system. You can divide each row into up to 12 columns. To create columns, you use the .col-* classes, where * represents the number of columns the element should span. For example, .col-6 creates a column that spans 6 out of the 12 available columns, taking up half of the row's width.</p>
+          <p><h3>Responsive Classes</h3> Bootstrap provides responsive classes to control the layout of columns on different screen sizes. You can use classes like .col-sm-, .col-md-, .col-lg-, and .col-xl- to specify different column widths for small, medium, large, and extra-large screens respectively. For example, .col-sm-6 creates a column that spans 6 columns on small screens and above.</p>
+          <p><h3>Nesting:</h3>Nesting in Bootstrap's grid system enables you to place rows and columns within other columns, allowing for more intricate and detailed layout designs. </p></div>
+      </div>
+    </div>
+    <div class="col-sm-6" id="gutters">
+      <div class="row g-3">
+        <div class="col-sm-12 content-box" style="background-color: #17a2b8;"><h1>Gutters</h1><p>
+          Gutters in the context of the Bootstrap grid system refer to the space between columns. They provide padding between adjacent columns to create visually appealing layouts and prevent content from appearing cramped or crowded. Gutters help maintain consistency and readability in designs by adding space between elements. In Bootstrap, gutters are responsive and customizable, allowing developers to adjust their size and spacing based on different screen sizes and layouts.
+          Options: .gx-, .gy-, .g-* for horizontal, vertical, and all gutters.
+          <br>Example: .g-0 to remove gutters.</p></div>
+        <div class="col-sm-12 content-box" style="background-color: #007bff;" id="usage"><h1>Usage</h1><b>Where we use grid system in bootstrap:</b><br>
+          <p><strong>1.Page Layout:</strong> The grid system is often used to structure the overall layout of a webpage.</p>
+          <p><strong>2.Responsive Design:</strong> One of the key features of the Bootstrap grid system is its responsiveness. It allows your website to adapt and display content optimally on various devices and screen sizes, including desktops, laptops, tablets, and smartphones. </p>
+          <p><strong>3.Grid-based Components:</strong> Many UI components in Bootstrap, such as cards, panels, and thumbnails, are designed to work within the grid system.</p> 
+          <p><strong>4.Forms and Input Groups:</strong> When designing forms or input groups, you can use the grid system to organize form elements and labels into rows and columns.</p> 
+          <p><strong>5.Image Galleries and Carousels:</strong> Image galleries and carousels often require a grid layout to display images or slides in an organized manner.</p> 
+         
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row g-1" id="pros-cons">
+    <div class="col-sm-6 content-box" style="background-color: #28a745;"><h2>Advantages</h2>
+      <p>1.Ease of Use</p>
+      <p>2.Consistency</p>
+      <p>3.Flexibility</p>
+      <p>4.Cross-browser Compatibility</p>
+      <p>5.Time Saving</p>
+</div>
+    <div class="col-sm-6 content-box" style="background-color: #dc3545;"><h2>Disadvantages</h2>
+      <p>1.Complexity</p>
+      <p>2.Over-reliance</p>
+      <p>3.Dependency on frameworks</p>
+      <p>4.Design limitations</p>
+      <p>5.Performance impact</p>
+</div>
+  </div>
+  <div class="row g-3">
+    <div class="col-sm-6 content-box" style="background-color:rgb(94, 51, 174);" id="conclusion"><h2>Conclusion</h2>
+      <p>Mastering the Bootstrap Grid System empowers you to create seamless responsive layouts for diverse devices. By leveraging the grid's flexibility and responsiveness, you can deliver an optimal user experience across all platforms.Overall, the grid system in Bootstrap is a versatile tool that can be used in various aspects of web development to create visually appealing, responsive, and user-friendly interfaces.It's very helpful these days.Its combination of flexibility, ease of use.
+      </p>
+</div>
+    <div class="col-sm-6 content-box" style="background-color:purple" class="ref"><h2>References</h2>
+      <p><p>Bootstrap Documentation:<a href="https://getbootstrap.com/docs/5.1/layout/grid/" target="_blank">https://getbootstrap.com/docs/5.1/layout/grid/</a></p>
+      <p>Codepen:<a href="https://codepen.io/" target="_blank">https://codepen.io/</a></p>
+      <p>GitHub:<a href="https://github.com/" target="_blank" >https://github.com/</a></p>
+      <p>Bootstrap Expo:<a href="https://expo.getbootstrap.com/" target="_blank">https://expo.getbootstrap.com/</a></p>
+      <p>Airbnb:<a href="https://www.airbnb.co.in/" target="_blank">https://www.airbnb.co.in/</a></p>
+</p>
+</div>
+  </div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-12 text-center">
+        <p>&copy; 2024-04-30 All Rights Reserved.</p>
+        <p style="font-family: Arial, sans-serif; font-size: 16px; font-weight: bold;">Presented By: Tarun, Kalyani, Mahalakshmi</p>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

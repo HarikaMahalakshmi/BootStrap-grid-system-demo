@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three Images Side by Side</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Adjust as needed */
+    }
+    
+    .center .col-lg-4 {
+      flex: 0 0 auto;
+    }
+    .center .col-sm-12{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .col-spacing {
+      margin-bottom: 1rem; /* Adjust as needed */
+    }
+
+    @media (min-width: 768px) {
+      .col-spacing {
+        margin-bottom: 2rem; /* Adjust as needed */
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row center flex-wrap">
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX2eyHl02E8KA-CkyabztVqa6EYhfBz3mHzA&s " height="200" width="200" class="img-fluid" alt="Image 1">
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvCIRAgqNHLEiVo-ZbJOVaYJWMAoQLZMXsuzLn-ytPgg&s" height="200" width="200" class="img-fluid" alt="Image 2">
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <img src="https://www.tutlane.com/images/bootstrap/bootstrap_grid_system_sample_diagram.PNG" height="300" width="250"class="img-fluid" alt="Image 3">
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
